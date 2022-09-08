@@ -1,0 +1,146 @@
+body {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(../img/backgrpund-acc.png);
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    clip-path: polygon(75% 0%, 100% 0%, 25% 100%, 0% 100%);
+    background-color: #f6513b;
+    height: 100%;
+    width: 670px;
+    left: 480px;
+    top: 0;
+    z-index: -1;
+}
+
+/* Navbar */
+
+.poke-nav {
+    background-color: #d9d7da;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.poke-nav .poke-item-1 {
+    width: 15%;
+}
+
+.poke-nav .poke-item-1 h1 {
+    margin: 0;
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+.poke-nav .poke-item-2 {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke-nav .poke-item-2 .poke-card {
+    border-radius: 10px;
+    background-color: #626866;
+    color: #fff;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 72px;
+    margin: 0 8px;
+}
+
+.poke-nav .poke-item-2 .poke-card img {
+    max-width: 15px;
+    height: auto;
+}
+
+.poke-nav .poke-item-2 .poke-card .poke-icon-vus {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #c6c5c3;
+    margin-right: 10px;
+}
+
+.poke-nav .poke-item-3::before {
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #d9d7da;
+}
+
+.poke-nav .poke-item-3 {
+    width: 39%;
+    text-align: center;
+    padding: 15px;
+    background-color: #353535;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Accueil liste */
+
+.poke-content::before{
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #d43f89;
+    filter: blur(100px);
+    border-radius: 50%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.poke-content{
+    position: relative;
+    height: 100vh;
+}
+
+.poke-content .poke-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.poke-content .poke-section .poke-visuel{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke-content .poke-section .poke-visuel img{
+    max-width: 250px;
+    height: auto;
+}
+
+.poke-content .poke-section .poke-list{
+    max-width: 75%;
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: auto;
+}
+
+.poke-content .poke-section .poke-list th,.poke-content .poke-section .poke-list td{
+    border-bottom: 0;
+}
