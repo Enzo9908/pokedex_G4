@@ -6,7 +6,7 @@ body {
     background-image: url(../img/backgrpund-acc.png);
 }
 
-body::after{
+body::after {
     content: "";
     position: absolute;
     clip-path: polygon(75% 0%, 100% 0%, 25% 100%, 0% 100%);
@@ -16,6 +16,20 @@ body::after{
     left: 480px;
     top: 0;
     z-index: -1;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4e212100;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(70, 20, 20);
+    border-radius: 10px;
 }
 
 /* Navbar */
@@ -28,6 +42,7 @@ body::after{
     top: 10px;
     width: 100%;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .poke-nav .poke-item-1 {
@@ -95,7 +110,7 @@ body::after{
 
 /* Accueil liste */
 
-.poke-content::before{
+.poke-content::before {
     content: "";
     width: 200px;
     height: 200px;
@@ -109,38 +124,75 @@ body::after{
     z-index: -1;
 }
 
-.poke-content{
+.poke-content {
     position: relative;
     height: 100vh;
 }
 
-.poke-content .poke-section{
+.poke-content .poke-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.poke-content .poke-section .poke-visuel{
+.poke-content .poke-section .poke-visuel {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.poke-content .poke-section .poke-visuel img{
+.poke-content .poke-section .poke-visuel img {
     max-width: 250px;
     height: auto;
 }
 
-.poke-content .poke-section .poke-list{
+.poke-content .poke-section .poke-list {
     max-width: 75%;
     max-height: 70vh;
     overflow: hidden;
     overflow-y: scroll;
     margin: auto;
+    margin-right: 80px;
 }
 
-.poke-content .poke-section .poke-list th,.poke-content .poke-section .poke-list td{
+.poke-content .poke-section .poke-list tr:hover {
+    background: red;
+    border-radius: 8px;
+}
+
+.poke-content .poke-section .poke-list tr th,
+.poke-content .poke-section .poke-list tr td {
     border-bottom: 0;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.poke-content .poke-section .poke-list tr th img {
+    max-width: 20px;
+    height: auto;
+}
+
+
+.poke-content .poke-section .poke-list tr td img {
+    max-width: 15px;
+    height: auto;
+}
+
+.poke-content .poke-section .poke-list tr td .poke-icon-vus {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #c6c5c37a;
+    margin-right: 10px;
+}
+
+.poke-content .poke-section .poke-list .poke-numero {
+    padding-right: 60px;
+}
+
+.poke-content .poke-section .poke-list .poke-nom,
+.poke-content .poke-section .poke-list .poke-numero {
+    width: 180px;
 }

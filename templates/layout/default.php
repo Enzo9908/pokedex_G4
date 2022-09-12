@@ -28,6 +28,7 @@
     </footer>
     </div>
     <?= $this->Html->script([
+        'jquery',
         'main',
     ]); ?>
     <?= $this->fetch('script') ?>
